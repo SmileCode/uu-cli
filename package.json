@@ -1,0 +1,19 @@
+{
+  "name": "uu-cli",
+  "version": "1.0.0",
+  "description": "uu cli",
+  "main": "index.js",
+  "bin": {
+    "uu-cli": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SmileCode/uu-cli.git"
+  },
+  "keywords": ["cli"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lsx",
+  "license": "MIT"
+}
