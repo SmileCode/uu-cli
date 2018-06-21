@@ -9,7 +9,7 @@ const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
 
-program.version('1.0.0', '-v, --version')
+program.version('1.0.1', '-v, --version')
     .command('init <name>')
     .action((name) => {
         if(!fs.existsSync(name)){
@@ -50,5 +50,5 @@ program.version('1.0.0', '-v, --version')
             // 错误提示项目已存在，避免覆盖原有项目
             console.log(symbols.error, chalk.red('项目已存在'));
         }
-    })
+    });
 program.parse(process.argv);
