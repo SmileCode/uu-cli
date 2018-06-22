@@ -25,7 +25,7 @@ program.version('1.0.2', '-v, --version')
             ]).then((answers) => {
                 const spinner = ora('正在下载模板...');
                 spinner.start();
-                download('https://github.com/SmileCode/vue_bp.git', name, {clone: true}, (err) => {
+                download('SmileCode/vue_bp', name, (err) => {
                     if(err){
                         spinner.fail();
                         console.log(symbols.error, chalk.red(err));
