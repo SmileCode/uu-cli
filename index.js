@@ -9,9 +9,9 @@ const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
 
-program.version('1.0.2', '-v, --version')
-    .command('init <name>')
-    .action((name) => {
+program.version(require('package').version, '-v, --version')
+    .command('init <template> <name>')
+    .action((template, name) => {
         if(!fs.existsSync(name)){
             inquirer.prompt([
                 {
@@ -21,11 +21,24 @@ program.version('1.0.2', '-v, --version')
                 {
                     name: 'author',
                     message: '请输入作者名称'
+                },
+                {
+                    name: 'template',
+                    message: '请输入模块类型(pc_bp/pc_stat/phone_wx/phone)'
                 }
             ]).then((answers) => {
                 const spinner = ora('正在下载模板...');
                 spinner.start();
-                download('SmileCode/vue_bp', name, (err) => {
+                let proUrl = '';
+                switch (template){
+                    case 'pc_bp':
+                        proUrl = 'SmileCode/template_pc_bp';
+                        break;
+                    default:
+                        proUrl = 'SmileCode/template_pc_bp';
+                }
+
+                download(proUrl, name, (err) => {
                     if(err){
                         spinner.fail();
                         console.log(symbols.error, chalk.red(err));
@@ -36,7 +49,7 @@ program.version('1.0.2', '-v, --version')
                             name,
                             description: answers.description,
                             author: answers.author
-                        }
+                        };
                         if(fs.existsSync(fileName)){
                             const content = fs.readFileSync(fileName).toString();
                             const result = handlebars.compile(content)(meta);

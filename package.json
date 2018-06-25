@@ -4,7 +4,7 @@
   "description": "uu cli",
   "main": "index.js",
   "bin": {
-    "uu-cli": "index.js"
+    "uu": "index.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
   "author": "lsx",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "commander": "^2.15.1",
-    "download-git-repo": "^1.0.2",
-    "handlebars": "^4.0.11",
-    "inquirer": "^6.0.0",
-    "log-symbols": "^2.2.0",
-    "ora": "^2.1.0"
+    "chalk": "^2.4.1",                 //终端字符串显示颜色
+    "commander": "^2.15.1",            //node 命令行
+    "download-git-repo": "^1.0.2",     //下载仓库
+    "handlebars": "^4.0.11",           //创建语义化模板
+    "inquirer": "^6.0.0",              //命令交互
+    "log-symbols": "^2.2.0",           //打印终端调试信息
+    "ora": "^2.1.0"                    //终端加载状态
   }
 }
