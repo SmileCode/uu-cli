@@ -21,10 +21,6 @@ program.version(require('package').version, '-v, --version')
                 {
                     name: 'author',
                     message: '请输入作者名称'
-                },
-                {
-                    name: 'template',
-                    message: '请输入模块类型(pc_bp/pc_stat/phone_wx/phone)'
                 }
             ]).then((answers) => {
                 const spinner = ora('正在下载模板...');

@@ -1,6 +1,6 @@
 {
   "name": "uu-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "uu cli",
   "main": "index.js",
   "bin": {
@@ -14,9 +14,6 @@
     "uu",
     "cli"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "lsx",
   "license": "MIT",
   "dependencies": {
