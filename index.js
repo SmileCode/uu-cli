@@ -28,10 +28,10 @@ program.version(require('package').version, '-v, --version')
                 let proUrl = '';
                 switch (template){
                     case 'pc_bp':
-                        proUrl = 'SmileCode/template_pc_bp';
+                        proUrl = 'lsxrj/template_pc_bp';
                         break;
                     default:
-                        proUrl = 'SmileCode/template_pc_bp';
+                        proUrl = 'lsxrj/template_pc_bp';
                 }
 
                 download(proUrl, name, (err) => {
